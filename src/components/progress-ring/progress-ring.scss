@@ -1,0 +1,20 @@
+@import '../../variables.scss';
+
+.progress-ring {
+    display: block;
+
+    &__background {
+        fill: none;
+        background: #ddd;
+    }
+
+    &__progress {
+        fill: none;
+        stroke: $clr_1;
+    }
+
+    &__text {
+        font-weight: bold;
+        fill: $clr_1;
+    }
+}

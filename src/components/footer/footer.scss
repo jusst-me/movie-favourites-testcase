@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+
+.footer {
+    width: 100%;
+    background-color: $clr_bg_dark;
+    color: $clr_white;
+    font-size: 12px;
+    padding: 16px 0;
+    
+    &__container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &__creator {
+            white-space: nowrap;
+        }
+    
+        &__technologies {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                grid-gap: 8px;
+                list-style: none;
+                padding: 0;
+                padding-left: 20px;
+    
+                li {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+}

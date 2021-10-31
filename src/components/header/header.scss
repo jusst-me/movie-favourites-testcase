@@ -1,0 +1,48 @@
+@import '../../variables.scss';
+
+.header {
+    height: 64px;
+    width: 100%;
+    background-color: $clr_1;
+    color: $clr_white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    &__nav {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        svg {display: block; width: 40px; margin-right: 12px;}
+
+        &__link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 136px;
+            // padding: 0 16px;
+
+            &:hover {
+                background-color: lighten($clr_1, 5);
+            }
+
+            &.active {
+                font-weight: bold;
+                background-color: lighten($clr_1, 5);
+
+                &::after {
+                    content: '';
+                    height: 4px;
+                    width: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background-color: $clr_black;
+                }
+            }
+        }
+    }
+}

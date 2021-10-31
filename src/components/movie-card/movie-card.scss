@@ -1,0 +1,50 @@
+@import '../../variables.scss';
+
+.movie-card {
+    width: 100%;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    background-color: $clr_white;
+    transition: 0.25s;
+    
+    &__poster {
+        position: relative;
+
+        img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            object-position: center;
+            margin: 12px 0;
+        }
+
+        &__vote-count {
+            position: absolute;
+            right: 8px;
+            bottom: 8px;
+            background-color: $clr_1;
+            color: $clr_white;
+            font-weight: bold;
+            padding: 0 12px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                height: 1em;
+                margin-right: 8px;
+                transform: translateY(1px);
+            }
+        }
+    }
+    
+    &__text {
+        padding: 12px;
+        border-top: 1px solid $clr_bg_light;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

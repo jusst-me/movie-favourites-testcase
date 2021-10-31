@@ -1,0 +1,141 @@
+@import '../../variables.scss';
+
+.movie {
+    flex: 1;
+
+    section {
+        padding: 32px 0;
+
+        @include breakpoint(md) {
+            padding: 64px 0;
+        }
+
+        &.gray {
+            background-color: $clr_bg_light;
+        }
+    }
+
+    &__not-available {
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        a {
+            display: inline-block;
+            background-color: $clr_black;
+            border-radius: 4px;
+            border: none;
+            color: $clr_white;
+            display: block;
+            padding: 8px 24px;
+            cursor: pointer;
+            width: fit-content;
+            margin-top: 12px;
+
+            &:hover {background-color: $clr_1;}
+        }
+    }
+
+    &__data {
+
+        .page-width {
+            display: flex;
+            flex-direction: column;
+
+            .column1 {
+                flex: 1;
+                h2 {
+                    margin-bottom: 12px;
+                    svg {
+                        width: 0.8em;
+                        margin-right: 12px;
+                    }
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            .column2 {flex: 2;}
+
+            .skeleton-container {
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            @include breakpoint(sm) {
+                flex-direction: row;
+            }
+        }
+
+        &__header {
+            background-color: $clr_bg_dark;
+            color: $clr_white;
+
+            .page-width {grid-gap: 20px}
+            
+            &__poster {
+                flex: 1;
+
+                .poster {
+                    max-height: 450px;
+                    // margin: 0 auto;
+                    display: block;
+                }
+            }
+
+            &__text {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .title {margin-bottom: 16px;}
+                .tags {
+                    margin-bottom: 16px;
+                    span {line-height: 30px; display: block; width: 80px;}
+                    &__container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        grid-gap: 8px;
+                    }
+                    .tag {
+                        border: solid 1px $clr_white;
+                        border-radius: 4px;
+                        padding: 4px 8px;
+                    }
+                }
+                .director {
+                    border: solid 1px $clr_white;
+                    border-radius: 4px;
+                    padding: 4px 8px;
+                }
+            }
+
+            
+        }
+        
+        &__plot {
+            p {
+                max-width: 500px;
+                margin-bottom: 8px;
+                &:last-child { margin-bottom: 0;}
+            }
+        }
+
+        &__rating {
+
+            .rating-list {
+                padding: 0;
+                list-style: none;
+                border-top: 1px solid $clr_divider;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 12px 0;
+                    border-bottom: 1px solid $clr_divider;
+
+                    .key { flex-shrink: 0; width: 144px; font-weight: bold; }
+                }
+            }
+        }
+    }
+}

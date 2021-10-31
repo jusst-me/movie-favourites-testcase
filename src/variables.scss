@@ -1,0 +1,36 @@
+$clr_1: #eb5676;
+$clr_2: red;
+$clr_3: blue;
+$clr_4: purple;
+
+$clr_divider: #888;
+$clr_white: #fff;
+$clr_bg_light: #f1f1f1;
+$clr_bg_dark: #333;
+$clr_black: #000000;
+$clr_gray: #aaa;
+
+
+// SCSS Mixins
+@mixin breakpoint($class) {
+    @if $class == xs {
+      @media (max-width: 767px) {
+        @content;
+      }
+    } @else if $class == sm {
+      @media (min-width: 768px) {
+        @content;
+      }
+    } @else if $class == md {
+      @media (min-width: 992px) {
+        @content;
+      }
+    } @else if $class == lg {
+      @media (min-width: 1200px) {
+        @content;
+      }
+    } @else {
+      @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+  }
+  
